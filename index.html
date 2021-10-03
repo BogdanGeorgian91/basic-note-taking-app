@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Taking App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Note Taker</h1>
+      <h2>Add a New Note</h2>
+
+      <textarea
+        name="note"
+        id="note"
+        cols="80"
+        rows="10"
+        placeholder="Write your note here..."
+      ></textarea>
+
+      <button id="add-button">Add Note</button>
+    </div>
+
+    <ul id="output"></ul>
+
+    <!-- Modal  -->
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <i class="fa fa-times"></i>
+        </button>
+
+        <div class="modal-header">
+          <h3 id="modal-header">Note Title</h3>
+        </div>
+
+        <div class="modal-content">
+          <p id="note-content-expand"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
