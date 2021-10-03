@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: honeydew;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  margin-top: 30px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #27e5ab;
+}
+
+#add-button {
+  font-size: 1.5em;
+  padding: 7px;
+  color: white;
+  background-color: #27e5ab;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+textarea {
+  border-radius: 10px;
+  padding: 20px;
+  width: 60%;
+  font-family: "Lato";
+  font-size: 1.2em;
+}
+
+#output {
+  max-width: 100%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  list-style-type: none;
+  justify-items: center;
+  row-gap: 1.2em;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
+  align-items: center;
+  border-radius: 30px;
+  width: 400px;
+  height: fit-content;
+  background-color: khaki;
+  font-size: 1.5em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+span:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin: 10px auto;
+  line-height: 25px;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 1.2em;
+}
+
+.view-button,
+.delete-button {
+  color: white;
+  background-color: #277ce5;
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 500px;
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+
+.modal-header {
+  background: #8bb7ed;
+  color: white;
+  padding: 15px;
+}
+
+.modal-content {
+  padding: 20px;
+  width: auto;
+  height: auto;
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 837px) {
+  #output {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (min-width: 838px) {
+  #output {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 1229px) {
+  #output {
+    grid-template-columns: auto auto auto;
+  }
+}
