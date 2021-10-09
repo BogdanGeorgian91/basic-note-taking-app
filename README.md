@@ -1,7 +1,9 @@
 # basic-note-taking-app
 
 The project can be seen live here: https://basic-not-taking-app.netlify.app/
-<br/><br/>
+<br/>
+Yeah, I've seen that typo.
+<br/>
 Project deployed on the 3rd of October 2021.
 <br/>
 
